@@ -1,0 +1,18 @@
+banco:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=barela77
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./data/mysql:/var/lib/mysql/
+
+phpgeneric:
+    image: baricio/php5.4
+    ports:
+      - "80:80"
+    links:
+      - "banco: banco"
+    volumes:
+      - ./conf/extra:/usr/local/etc/php/conf.d/
+      - ~/projetos/central/www:/var/www/html
