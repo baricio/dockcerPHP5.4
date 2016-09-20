@@ -1,7 +1,7 @@
 banco:
     image: mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=foo
+      - MYSQL_ROOT_PASSWORD=barela77
     ports:
       - "3306:3306"
     volumes:
@@ -15,4 +15,4 @@ phpgeneric:
       - "banco: banco"
     volumes:
       - ./conf/extra:/usr/local/etc/php/conf.d/
-      - ~/projetos/central/www:/var/www/html
+      - ~/projetos/central:/var/www/html
