@@ -1,7 +1,7 @@
 banco:
     image: mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=barela77
+      - MYSQL_ROOT_PASSWORD=mypass
     ports:
       - "3306:3306"
     volumes:
